@@ -1,0 +1,32 @@
+<h1>Chefs Waiting for KYC Verification</h1>
+<div div class="row" *ngIf="pendingChefList">
+    <div class="col-md-4" *ngFor="let chef of pendingChefList ">
+      <div class="thumbnail" style="text-align:center">
+        <div style="margin :0 auto">
+          <h3>{{ chef.uid }}</h3>
+          <h6>Name: {{chef.fullname}}</h6>
+          <h6>Email: {{ chef.email }}</h6>
+          <h6>Address: {{chef.address}}</h6>
+          <h6>Mobile: {{chef.mobile}}</h6>
+          <p><button class="btn btn-primary" (click)="activateChef(chef.uid)">Activate Chef</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1>Issues faced by user</h1>
+  <div div class="row" *ngIf="issuesList">
+    <div class="col-md-4" *ngFor="let issue of issuesList ">
+      <div class="thumbnail" style="text-align:center">
+        <div style="margin :0 auto">
+          <h3>Issue Id:{{ issue.issueid }}</h3>
+          <h6>User Id: {{issue.userid}}</h6>
+          <h6>User Name: {{issue.username}}</h6>
+          <h6>Email: {{ issue.email }}</h6>
+          <h6>Role: {{issue.role}}</h6>
+          <h6>Issue: {{issue.issue}}</h6>
+          <p><button class="btn btn-primary" (click)="acknowledge(issue.issueid)">Acknowledged</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
