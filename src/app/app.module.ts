@@ -3,7 +3,6 @@ import { NgModule, Component } from '@angular/core';
 import { environment } from "../environments/environment";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PendingChefForVerificationComponent } from './pending-chef-for-verification/pending-chef-for-verification.component';
 import { Route, Routes , RouterModule} from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AngularFireModule } from "@angular/fire";
@@ -19,15 +18,10 @@ const appRoutes:Routes=[
     path: "dashboard",
     component: DashboardComponent,
   },
-  {
-    path:"waiting-for-verification",
-    component:PendingChefForVerificationComponent,
-  }
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    PendingChefForVerificationComponent,
     DashboardComponent
   ],
   imports: [
